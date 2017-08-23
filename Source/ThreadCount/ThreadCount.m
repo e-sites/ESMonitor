@@ -30,7 +30,7 @@ static int getThreadsCount() {
     vm_deallocate(this_task, (vm_address_t)threads, sizeof(thread_t) * thread_count);
     return thread_count;
 #else
-    return 0
+    return 0;
 #endif
 }
 
