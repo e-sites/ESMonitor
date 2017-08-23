@@ -23,15 +23,15 @@ Compatible with:
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow!
+    var window: UIWindow?
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
                       -> Bool {
-        window.rootViewController = MainViewController(nibName: nil, bundle: Bundle.main)
-        window.makeKeyAndVisible()
+        window?.rootViewController = MainViewController(nibName: nil, bundle: Bundle.main)
+        window?.makeKeyAndVisible()
         #if DEBUG
-            window.addMonitor()
+            window?.addMonitor()
         #endif
         return true
     }
